@@ -22,14 +22,14 @@ app.get("/books", (req,res)=>{
     })
 })
 
-app.put('/', (req,res)=>{
+app.put('/update/:id', (req,res)=>{
     const q = "update `books` set `title`= (?), `desc`=(?), `cover`=(?) where `id`= (?) ";
-    const id = req.body.id;
+    const id = req.params.id;
     const title = req.body.title;
     const desc = req.body.desc;
     const cover = req.body.cover;
 
-    db.query(q, [id, title, desc, cover], (err, data)=>{
+    db.query(q, [title, desc, cover, id], (err, data)=>{
         if (err) return res.json("Error!");
         return res.json(data);
     })
