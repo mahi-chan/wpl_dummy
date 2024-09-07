@@ -3,7 +3,7 @@ import mysql from "mysql"
 
 const app = express()
 
-const db = mysql.createConnection({
+const db = mysql.createConnection({  
     host:"localhost",
     user:"root",
     password:"love",
