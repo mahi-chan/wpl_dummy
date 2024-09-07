@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import axios from 'axios'
 const Books = () => {
@@ -25,6 +26,7 @@ const Books = () => {
                     <div className="book" key={book.id}>
                         <h2>{book.title}</h2>
                         <p>{book.desc}</p>
+                        <Link to={`/update/${book.id}`}>Update</Link>
                     </div>
                 ))}
             </div>
