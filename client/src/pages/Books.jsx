@@ -14,20 +14,14 @@ const Books = () => {
             }catch(err){
                 console.log(err)
             }
-<<<<<<< HEAD
-        };
-        fetchAllBooks();
-=======
         }
         fetchAllBooks()
->>>>>>> c3050cc99ea790761fb957f1a77c04da1350422e
     },[])
 
     return (
         <div>
             <h1>Lama Book Shop</h1>
             <div className="books">
-<<<<<<< HEAD
                 {books.map((book) => (
                     <div className="book" key={book}>
                         {book.cover && <img src={book.cover} alt="" />}
@@ -42,7 +36,6 @@ const Books = () => {
             <button>
                 <Link to="/add">Add new book</Link>
             </button>
-=======
                 {books.map(book=>(
                     <div className="book" key={book.id}>
                         <h2>{book.title}</h2>
@@ -51,8 +44,6 @@ const Books = () => {
                     </div>
                 ))}
             </div>
->>>>>>> c3050cc99ea790761fb957f1a77c04da1350422e
-        </div>
     )
-};
+}
 export default Books;
